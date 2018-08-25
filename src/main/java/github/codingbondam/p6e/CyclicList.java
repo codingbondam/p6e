@@ -40,16 +40,16 @@ public class CyclicList {
         n5.next = n2;
 
         // even case
-        System.out.println(isCyclic(n1));
+        assert isCyclic(n1);
 
         n5.next = null;
-        System.out.println(isCyclic(n1));
+        assert !isCyclic(n1);
 
         // odd case
         Node n6 = new Node();
         n5.next = n6;
         n6.next = n2;
-        System.out.println(isCyclic(n1));
+        assert isCyclic(n1);
 
     }
 }
