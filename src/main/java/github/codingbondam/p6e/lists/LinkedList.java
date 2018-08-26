@@ -1,6 +1,6 @@
-package main.java.github.codingbondam.p6e;
+package main.java.github.codingbondam.p6e.lists;
 
-
+import static main.java.github.codingbondam.p6e.Utils.assertEquals;
 import java.util.Iterator;
 
 public class LinkedList <T> {
@@ -103,28 +103,28 @@ public class LinkedList <T> {
         for (int i = 0; i < 10; i ++) {
             list.add(i);
         }
-        assert "0123456789".equals(list.toString());
+        assertEquals("0123456789", list);
 
         // remove tail
         list.remove(0);
-        assert "012345678".equals(list.toString());
+        assertEquals("012345678", list);
 
         // remove head
         list.remove(8);
-        assert "12345678".equals(list.toString());
+        assertEquals("12345678", list);
 
         // somewhere from the middle
         list.remove(5);
-        assert "1245678".equals(list.toString());
+        assertEquals("1245678", list);
 
         for(int i = 6; i > 0; i--) {
             list.remove(i);
         }
-        assert "8".equals(list.toString());
+        assertEquals("8", list);
 
         // when mth is the only element
         list.remove(0);
-        assert "".equals(list.toString());
+        assertEquals("", list);
     }
 
     public static void main(String[] args) {

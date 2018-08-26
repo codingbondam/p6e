@@ -1,4 +1,6 @@
-package main.java.github.codingbondam.p6e;
+package main.java.github.codingbondam.p6e.lists;
+
+import static main.java.github.codingbondam.p6e.Utils.assertEquals;
 
 public class MultiLevelList <T> {
 
@@ -101,7 +103,7 @@ public class MultiLevelList <T> {
         }
         String output = buffer.toString();
 
-        assert "abcdefghijk".equals(output);
+        assertEquals("abcdefghijk", output);
     }
 
     public static void testFlatten2() {
@@ -166,7 +168,7 @@ public class MultiLevelList <T> {
 
         String output = buffer.toString();
 
-        assert "5331721625627891257213".equals(output);
+        assertEquals("5331721625627891257213", output);
         list.unflatten();
     }
 

@@ -1,4 +1,6 @@
-package main.java.github.codingbondam.p6e;
+package main.java.github.codingbondam.p6e.lists;
+
+import static main.java.github.codingbondam.p6e.Utils.assertEquals;
 
 public class CyclicList {
 
