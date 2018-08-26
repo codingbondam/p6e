@@ -3,6 +3,9 @@ package main.java.github.codingbondam.p6e.trees;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
+import java.util.function.Consumer;
+
 import static main.java.github.codingbondam.p6e.Utils.assertEquals;
 
 public class BinaryTree <T> {
@@ -24,6 +27,41 @@ public class BinaryTree <T> {
         public Node(T data) {
             this.data = data;
         }
+    }
+
+    /**
+     * similar to visit but doesn't use recursion
+     * @param consumer
+     */
+    public void traverse(Consumer<T> consumer) {
+
+        Stack<Node<T>> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.empty()) {
+            Node<T> node = stack.pop();
+            consumer.accept(node.data);
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+    }
+
+    public void visit(Consumer<T> consumer) {
+        visitInternal(root, consumer);
+    }
+
+    private void visitInternal(Node<T> root, Consumer<T> consumer) {
+        if (root == null) {
+            return;
+        }
+
+        consumer.accept(root.data);
+        visitInternal(root.left, consumer);
+        visitInternal(root.right, consumer);
     }
 
     /**
@@ -99,8 +137,41 @@ public class BinaryTree <T> {
 
     }
 
+    public static void testVisit() {
+
+        Node<Integer> i100 = new Node<Integer>(100);
+        Node<Integer> i50 = new Node<Integer>(50);
+        Node<Integer> i150 = new Node<Integer>(150);
+        Node<Integer> i25 = new Node<Integer>(25);
+        Node<Integer> i75 = new Node<Integer>(75);
+        Node<Integer> i125 = new Node<Integer>(125);
+        Node<Integer> i175 = new Node<Integer>(175);
+        Node<Integer> i110 = new Node<Integer>(110);
+
+        i100.left = i50;
+        i100.right = i150;
+        i50.left = i25;
+        i50.right = i75;
+        i150.left = i125;
+        i150.right = i175;
+        i125.left = i110;
+
+        BinaryTree<Integer> tree = new BinaryTree<>(i100);
+
+        StringBuffer buffer = new StringBuffer();
+        tree.visit(t -> buffer.append("<" + t + ">"));
+        assertEquals("<100><50><25><75><150><125><110><175>", buffer.toString());
+
+        StringBuffer buffer2 = new StringBuffer();
+        tree.traverse(t -> buffer2.append("<" + t + ">"));
+        assertEquals("<100><50><25><75><150><125><110><175>", buffer2.toString());
+
+
+    }
+
     public static void main(String[] args) {
         testHeight();
+        testVisit();
     }
 
 }

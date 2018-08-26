@@ -42,16 +42,16 @@ public class CyclicList {
         n5.next = n2;
 
         // even case
-        assert isCyclic(n1);
+        assertEquals(Boolean.TRUE, isCyclic(n1));
 
         n5.next = null;
-        assert !isCyclic(n1);
+        assertEquals(Boolean.FALSE, isCyclic(n1));
 
         // odd case
         Node n6 = new Node();
         n5.next = n6;
         n6.next = n2;
-        assert isCyclic(n1);
+        assertEquals(Boolean.TRUE, isCyclic(n1));
 
     }
 }
