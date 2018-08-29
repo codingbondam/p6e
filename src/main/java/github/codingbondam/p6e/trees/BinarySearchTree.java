@@ -117,22 +117,22 @@ public class BinarySearchTree {
         BinarySearchTree bst = new BinarySearchTree(n23);
         int[] out = bst.array();
         Arrays.sort(out);
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         for (int i = 0; i < out.length; i++) {
-            buffer.append("<");
-            buffer.append(out[i]);
-            buffer.append(">");
+            builder.append("<");
+            builder.append(out[i]);
+            builder.append(">");
         }
-        assertEquals("<12><13><15><17><22><23><48><96><144>", buffer.toString());
+        assertEquals("<12><13><15><17><22><23><48><96><144>", builder.toString());
         BinarySearchTree bst1 = new BinarySearchTree(out);
         int[] out2 = bst1.array();
-        buffer = new StringBuffer();
+        builder = new StringBuilder();
         for (int i = 0; i < out2.length; i++) {
-            buffer.append("<");
-            buffer.append(out2[i]);
-            buffer.append(">");
+            builder.append("<");
+            builder.append(out2[i]);
+            builder.append(">");
         }
-        assertEquals("<12><13><17><96><144><22><15><23><48>", buffer.toString());
+        assertEquals("<12><13><17><96><144><22><15><23><48>", builder.toString());
     }
 
     public static void testLca() {

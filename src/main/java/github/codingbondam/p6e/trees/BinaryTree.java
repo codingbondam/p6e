@@ -169,13 +169,13 @@ public class BinaryTree <T> {
 
         BinaryTree<Integer> tree = new BinaryTree<>(i100);
 
-        StringBuffer buffer = new StringBuffer();
-        tree.visit(t -> buffer.append("<" + t + ">"));
-        assertEquals("<100><50><25><75><150><125><110><175>", buffer.toString());
+        StringBuilder builder = new StringBuilder();
+        tree.visit(t -> builder.append("<" + t + ">"));
+        assertEquals("<100><50><25><75><150><125><110><175>", builder.toString());
 
-        StringBuffer buffer2 = new StringBuffer();
-        tree.traverse(t -> buffer2.append("<" + t + ">"));
-        assertEquals("<100><50><25><75><150><125><110><175>", buffer2.toString());
+        StringBuilder builder2 = new StringBuilder();
+        tree.traverse(t -> builder2.append("<" + t + ">"));
+        assertEquals("<100><50><25><75><150><125><110><175>", builder2.toString());
 
 
     }

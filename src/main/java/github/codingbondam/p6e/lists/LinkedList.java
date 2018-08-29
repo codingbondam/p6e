@@ -77,13 +77,13 @@ public class LinkedList <T> {
     public String toString() {
         Iterator<T> iterator = this.iterator();
 
-        StringBuffer buffer = new StringBuffer();
-        buffer.append("\"");
+        StringBuilder builder = new StringBuilder();
+        builder.append("\"");
         while (iterator.hasNext()) {
-            buffer.append(iterator.next());
+            builder.append(iterator.next());
         }
-        buffer.append("\"");
-        return buffer.toString();
+        builder.append("\"");
+        return builder.toString();
     }
 
     // helper class

@@ -1,4 +1,4 @@
-package main.java.github.codingbondam.p6e.trees;
+package main.java.github.codingbondam.p6e.graphs;
 
 import java.util.HashSet;
 import java.util.LinkedList;

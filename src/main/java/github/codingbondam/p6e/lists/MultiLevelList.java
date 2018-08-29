@@ -96,12 +96,12 @@ public class MultiLevelList <T> {
 
         Node<String> curr = list.head;
 
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         while (curr != null) {
-            buffer.append(curr.data);
+            builder.append(curr.data);
             curr = curr.next;
         }
-        String output = buffer.toString();
+        String output = builder.toString();
 
         assertEquals("abcdefghijk", output);
     }
@@ -160,13 +160,13 @@ public class MultiLevelList <T> {
 
         Node<Integer> curr = list.head;
 
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         while (curr != null) {
-            buffer.append(curr.data);
+            builder.append(curr.data);
             curr = curr.next;
         }
 
-        String output = buffer.toString();
+        String output = builder.toString();
 
         assertEquals("5331721625627891257213", output);
         list.unflatten();
