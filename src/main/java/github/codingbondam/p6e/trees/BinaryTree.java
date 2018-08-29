@@ -27,6 +27,17 @@ public class BinaryTree <T> {
         public Node(T data) {
             this.data = data;
         }
+
+        /**
+         * rotates right at the given node
+         * @return
+         */
+        public Node rotateRight() {
+            Node newRoot = left;
+            left = newRoot.right;
+            newRoot.right = this;
+            return newRoot;
+        }
     }
 
     /**
