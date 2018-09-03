@@ -5,28 +5,60 @@ import java.util.List;
 
 public class Strings {
 
-    private StringBuilder out = new StringBuilder();
+    public static class Combinations {
 
-    private final String in;
+        private char[] input;
 
-    public Strings(String str) {
-        in = str;
-    }
+        private char[] buffer;
 
-    public void combine() {
-        combine(0);
-    }
+        int pos = 0;
 
-    private void combine(int start) {
-        for(int i = start; i < in.length(); i++) {
-            out.append(in.charAt(i));
-            System.out.println(out);
-            if (i < in.length()) {
-                combine(i + 1);
-            }
-            out.setLength(out.length() - 1);
+        public Combinations(char[] input) {
+            this.input = input;
+            buffer = new char[input.length];
         }
+
+        public void combine() {
+            combine(0);
+        }
+
+        private void combine(int start) {
+            for (int i = start; i < input.length; i++) {
+                buffer[pos] = input[i];
+                print(buffer);
+                pos++;
+                if (start + 1 < input.length) {
+                    combine(i + 1);
+                    buffer[pos] = 0;
+                }
+                pos--;
+            }
+        }
+
     }
+
+//    private StringBuilder out = new StringBuilder();
+//
+//    private final String in;
+//
+//    public Strings(String str) {
+//        in = str;
+//    }
+//
+//    public void combine() {
+//        combine(0);
+//    }
+//
+//    private void combine(int start) {
+//        for(int i = start; i < in.length(); i++) {
+//            out.append(in.charAt(i));
+//            System.out.println(out);
+//            if (i < in.length()) {
+//                combine(i + 1);
+//            }
+//            out.setLength(out.length() - 1);
+//        }
+//    }
 
 //    /**
 //     * all combinations of length k for the input
@@ -232,8 +264,8 @@ public class Strings {
 //        }
 //        permute("rama".toCharArray());
 //        combine("abcd".toCharArray());
-        Strings s = new Strings("abcd");
-        s.combine();
+        Combinations c = new Combinations("abcd".toCharArray());
+        c.combine();
     }
 
 }
