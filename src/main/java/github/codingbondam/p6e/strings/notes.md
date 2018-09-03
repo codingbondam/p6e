@@ -16,4 +16,5 @@
 3. remember to do a detailed dry run when you are messing with indices
 4. think and code each line and try to write pseudo code for such problems first
 5. make sure solution is simple and easy to follow without doing a lot of back and forth
+6. when problem gets tougher or you are stuck in an approach, try going to drawing board and focussing on getting it to work first than optimizations or elegance
  

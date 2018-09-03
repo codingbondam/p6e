@@ -1,6 +1,103 @@
 package main.java.github.codingbondam.p6e.strings;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Strings {
+
+    private StringBuilder out = new StringBuilder();
+
+    private final String in;
+
+    public Strings(String str) {
+        in = str;
+    }
+
+    public void combine() {
+        combine(0);
+    }
+
+    private void combine(int start) {
+        for(int i = start; i < in.length(); i++) {
+            out.append(in.charAt(i));
+            System.out.println(out);
+            if (i < in.length()) {
+                combine(i + 1);
+            }
+            out.setLength(out.length() - 1);
+        }
+    }
+
+//    /**
+//     * all combinations of length k for the input
+//     * @param input
+//     */
+//    public static void combine(char[] input) {
+//        combine(new char[input.length], 0, input, 0);
+//    }
+//
+//    private static void combine(char[] combination, int cpos, char[] input, int ipos) {
+//        for (int i = ipos; i < input.length; i++) {
+//            combination[cpos] = input[i];
+//            print(combination);
+//            if (i < input.length) {
+//                combine(combination, cpos + 1, input, i + 1);
+//            }
+//        }
+//    }
+
+    public static void permute(char[] input) {
+        permute(input, new boolean[input.length], new char[input.length], 0);
+    }
+
+    private static void permute(char[] input, boolean[] used, char[] permutation, int pos) {
+        if (pos == input.length) {
+            System.out.println(permutation);
+        }
+        for (int i = 0; i < input.length; i++) {
+            if (!used[i]) {
+                permutation[pos] = input[i];
+                used[i] = true;
+                permute(input, used, permutation, pos + 1);
+                used[i] = false;
+            }
+        }
+    }
+
+    public static String remove(String input, int remove) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < input.length(); i++) {
+            if (i != remove) {
+                builder.append(input.substring(i, i + 1));
+            }
+        }
+        return builder.toString();
+    }
+
+    public static List<String> perumute2(String input) {
+        List<String> combinations = new ArrayList<>();
+        List<String> remainingLetters = new ArrayList<>();
+        for (int i = 0; i < input.length(); i++) {
+            combinations.add(input.substring(i, i + 1));
+            remainingLetters.add(remove(input, i));
+        }
+        for (int i = 1; i < input.length(); i++) {
+            List<String> newCombinations = new ArrayList<>();
+            List<String> newRemainingLetters = new ArrayList<>();
+            for (int j = 0; j < combinations.size(); j++) {
+                String combination = combinations.get(j);
+                String remaining = remainingLetters.get(j);
+                for (int k = 0; k < remaining.length(); k++) {
+                    newCombinations.add(combination + remaining.substring(k, k + 1));
+                    newRemainingLetters.add(remove(remaining, k));
+                }
+            }
+            combinations = newCombinations;
+            remainingLetters = newRemainingLetters;
+        }
+        return combinations;
+    }
+
 
     public static int to(char[] str) {
         int i = 0;
@@ -121,15 +218,22 @@ public class Strings {
 
     public static void main(String[] args) {
 
-        print(remove(new char[]{'a', 'e', 'r', 'o', 'p', 'l', 'a', 'n', 'e'}, new char[]{'a', 'e'}));
-        print(remove(new char[]{'c', 'a', 'r'}, new char[]{'a'}));
-        print(reverseWords("i am good".toCharArray()));
-        print(reverseWords("i am  good".toCharArray()));
-        print(reverseWords("  i am  good  ".toCharArray()));
-        print(from(1092));
-        print(from(-22128));
-        System.out.println(to("-22128".toCharArray()));
-        System.out.println(to("123".toCharArray()));
+//        print(remove(new char[]{'a', 'e', 'r', 'o', 'p', 'l', 'a', 'n', 'e'}, new char[]{'a', 'e'}));
+//        print(remove(new char[]{'c', 'a', 'r'}, new char[]{'a'}));
+//        print(reverseWords("i am good".toCharArray()));
+//        print(reverseWords("i am  good".toCharArray()));
+//        print(reverseWords("  i am  good  ".toCharArray()));
+//        print(from(1092));
+//        print(from(-22128));
+//        System.out.println(to("-22128".toCharArray()));
+//        System.out.println(to("123".toCharArray()));
+//        for (String c : permute2("rama")) {
+//            System.out.println(c);
+//        }
+//        permute("rama".toCharArray());
+//        combine("abcd".toCharArray());
+        Strings s = new Strings("abcd");
+        s.combine();
     }
 
 }
