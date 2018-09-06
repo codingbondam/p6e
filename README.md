@@ -77,5 +77,10 @@
 1. use a hash map or an array for lookups
 2. in memory string reversal using two pointers
 
+# list of bugs found when running on computer
+1. returning values for methods that compute
+2. assigning returned values 
+
+
 
 
