@@ -1,9 +1,25 @@
 package main.java.github.codingbondam.p6e.strings;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Strings {
+
+
+    public static List<String> dropDuplicates(List<String> input) {
+
+        Set<String> output = new LinkedHashSet<>();
+        for (String s : input) {
+            if (output.contains(s)) {
+                continue;
+            } else {
+                output.add(s);
+            }
+        }
+        return new ArrayList<>(output);
+    }
 
     public static class Combinations {
 
@@ -266,6 +282,14 @@ public class Strings {
 //        combine("abcd".toCharArray());
         Combinations c = new Combinations("abcd".toCharArray());
         c.combine();
+
+        List<String> input = new ArrayList<>();
+        input.add("ram");
+        input.add("joey");
+        input.add("krish");
+        input.add("ram");
+        input.add("sagar");
+        System.out.println(dropDuplicates(input));
     }
 
 }
