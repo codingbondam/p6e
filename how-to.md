@@ -116,3 +116,7 @@ What seem to be helping during preparation?
 | Hardcoded 0 or input.length in recursive methods | 1
 | Not assigning returned values in recursive calls | 1
 | Did not handle key exists case when updating a hash map | 1
+| Bitwise operators return a new value, they are not in place operations | 2
+| When you are treating int as unsigned int using > 0 is error prone | 2
+| In Java `^` does not mean raising to the power of, it means ... | 1
+
