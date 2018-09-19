@@ -30,6 +30,7 @@
 ### Step 4
 1. Verify conceptually at a high level
 2. Check hotspots like arithmetic and unusual logic
+3. Ensure null checks and edge cases are coded for
 ### Step 5
 1. Dry run using a small test case. If there are many parts, dry run them individually
 2. Use more test cases based on the complexity as time permits
@@ -110,13 +111,16 @@ What seem to be helping during preparation?
 |--- | --- |
 | Missed null check on input | 3
 | Missed input validation | 1
+| Edge cases in input that need special handling in logic are missed | 1
 | Redefined the same variable name i, j | 1
 | Return statement missing | 1
 | Return type on signature doesn't match the type of returned object | 1
 | Hardcoded 0 or input.length in recursive methods | 1
 | Not assigning returned values in recursive calls | 1
-| Did not handle key exists case when updating a hash map | 1
 | Bitwise operators return a new value, they are not in place operations | 2
+| Did not handle key exists case when updating a hash map | 1
 | When you are treating int as unsigned int using > 0 is error prone | 2
 | In Java `^` does not mean raising to the power of, it means ... | 1
+| Missed adding bootstrap, base case data to output | 1
+
 
