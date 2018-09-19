@@ -1,6 +1,32 @@
 package main.java.github.codingbondam.p6e.dynamicprogramming;
 
+import java.util.Arrays;
+
 public class NWays {
+
+    public int climbStairs(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+        int[] memo = new int[n + 1];
+        Arrays.fill(memo, -1);
+        return climbStairs(n, memo);
+    }
+
+    private int climbStairs(int n, int[] memo) {
+        if (memo[n] == -1) {
+            if (n == 0) {
+                memo[n] = 1;
+            } else if (n == 1) {
+                memo[n] = climbStairs(n - 1, memo);
+            } else if (n >= 2) {
+                memo[n] = climbStairs(n - 1, memo) + climbStairs(n - 2, memo);
+            } else {
+                throw new IllegalArgumentException();
+            }
+        }
+        return memo[n];
+    }
 
     /**
      * nways to climb k steps if you can climb 1, 2 or 3 steps at a time

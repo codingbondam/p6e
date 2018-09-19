@@ -32,3 +32,4 @@
 11. Negative numbers are represented using 2<sup>s</sup> complement of the absolute value of the number and a 1 in sign bit.
 12. Positive numbers are presented as it is.
 13. In Java, arithmetic operators like `+` have precedence over logical operators like `<<`.
+14. Helpful java api to memorize `Arrays.fill(int[] arr, int val)`
