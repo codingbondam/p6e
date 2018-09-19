@@ -7,6 +7,11 @@
 | Quick Sort | O(Nlog(N) to O(N<sup>2</sup>), In Place, Not stable | A pivot is selected, two lists are formed one where all elements in the list are smaller than the pivot and one bigger and continue using recursion |
 | Merge sort | O(Nlog(N), Additional Memory O(N) | Divide the list into two, sort them and merge them |
 | Hybrid | | General purpose sort algorithms found in libraries
+| Radix Sort | | [Here](https://en.wikipedia.org/wiki/Radix_sort) |
+| Counting Sort | | | [Here](https://www.geeksforgeeks.org/counting-sort/) |
+| Bucket Sort | | | [Here](http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/bucketSort.htm) |
+
+
 
 # Data Structures
 
@@ -33,3 +38,4 @@
 12. Positive numbers are presented as it is.
 13. In Java, arithmetic operators like `+` have precedence over logical operators like `<<`.
 14. Helpful java api to memorize `Arrays.fill(int[] arr, int val)`
+15. Java datatype basics [here](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)

@@ -35,9 +35,33 @@
 ## Behavioral
 
 ## Design Patterns
+[Top 10 OOP Principles Summary](https://1.bp.blogspot.com/-Od9z4FHN9mA/VbjRcuQAcXI/AAAAAAAADfI/gc6uJdAP7bs/s1600/10%2BOOP%2BDesign%2BPRinciples%2Bfor%2BJava%2Bprogrammers.png)
+[Aggregation](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/)
+[Observer](https://dzone.com/articles/observer-pattern-java)
+[Proxy](https://dzone.com/articles/design-patterns-proxy)
+[IoC vs Dependency Injection](https://stackoverflow.com/questions/6550700/inversion-of-control-vs-dependency-injection)
+[Composition](https://javarevisited.blogspot.com/2015/06/difference-between-inheritance-and-Composition-in-Java-OOP.html)
+[Bridge](https://www.journaldev.com/1491/bridge-design-pattern-java)
+[Adaptor](https://www.journaldev.com/1487/adapter-design-pattern-java)
+[Factory](https://www.journaldev.com/1392/factory-design-pattern-in-java)
+[Singleton](https://www.geeksforgeeks.org/singleton-design-pattern/)
 
 ## Frameworks
 1. Problem description and how they solve it
 
-## Datastores
+## Databases and data stores
 1. What they are optimized for
+[Elastic](https://qbox.io/blog/maximize-guide-elasticsearch-indexing-performance-part-1)
+[Elastic Basics](https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html)
+[Elastic Basics #2](https://dzone.com/articles/what-is-elasticsearch-and-how-it-can-be-useful)
+[Inverted Index](https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html)
+[Lucene](https://stackoverflow.com/questions/2705670/how-does-lucene-work)
+[DB Read Perf] (https://medium.com/jimmy-farrell/the-basics-of-database-indexes-for-relational-databases-bfc634d6bb37)
+
+
+## Distributed Systems
+[Consistent Hashing](https://en.wikipedia.org/wiki/Consistent_hashing)
+[CAP](http://pages.cs.wisc.edu/~swift/classes/cs739-sp10/blog/2010/03/dynamo_amazons_highly_availabl.html)
+
+
+## Architectures and Design Concepts
