@@ -10,19 +10,30 @@
 | Radix Sort | | [Here](https://en.wikipedia.org/wiki/Radix_sort) |
 | Counting Sort | | | [Here](https://www.geeksforgeeks.org/counting-sort/) |
 | Bucket Sort | | | [Here](http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/bucketSort.htm) |
-| Memoization | | | Top down. Recursive algorithm w/ caching repeated calls (aka overlapping subproblems) |
-| Dynamic Programming | | |  Bottom up. Iterative, find the result for sub problems, and use the results to compute the result of the problem. And this problem becomes sub problem for next level |
+| Memoization | | | Top down. Recursive algorithm w/ caching repeated calls (aka overlapping sub-problems) |
+| Dynamic Programming | | |  Bottom up. Iterative, find the result for sub problems first, and use the results to compute the result of the problem. And this problem becomes sub problem for next iteration. |
+| BFS and DFS | O(v + e)
+| Dijkstra's Shortest Path | O(v^2) or O((v+e)log(v))
+| Topological Sort | O(v + e)
+| Minimum Spanning Tree | O(elog(v))
 
 
 # Data Structures
-
 | Data Structure | Operation | Complexity | Java API | Notes |
 | -------------- | --------- | ---------- | ---------| ------|
 | Hash Table | Write | O(1) | HashMap#put ||
 | Hash Table | Read | O(1) | HashMap#get ||
+| Hash Set | Membership | O(1) | HashSet#contains ||
 | Queue | remove | O(1) | LinkedList#remove ||
 | Queue | add | O(1) | LinkedList#add ||
-| Min Heap | | | PriorityQueue | Priority queue in Java is a min heap based on the ordering given by the comparator. Comparator needs to have at least 3 different state values for it to work properly |
+| Min Heap | add | O(log(n))| PriorityQueue#add | Priority queue in Java is a min heap based on the ordering given by the comparator. Comparator needs to have at least 3 different state values for it to work properly |
+| Min Heap | remove | O(log(n))| PriorityQueue#remove | |
+| Min Heap | peek | O(1) | PriorityQueue#peek | | While Java API supports remove(Object o) and contains(Object o), they are both O(n)
+| Binary Search (Red Black Tree) | contains | O(log(n)) | TreeSet#contains |
+| Binary Search (Red Black Tree) | remove | O(log(n)) | TreeSet#remove |
+| Binary Search (Red Black Tree) | iterator | O(n) | Treeset#iterator |
+| Union Find Data Structure | union | O(\alpha (n)), \alpha(n) < 5 for almost any n
+| Union Find Data Structure | find | O(\alpha (n)), \alpha(n) < 5 for almost any n
 
 # Special knowledge
 1. `utf-8` uses 1 to 4 8-bit chars to encode Unicode code points
