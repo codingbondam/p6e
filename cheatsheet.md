@@ -32,8 +32,8 @@
 | Binary Search (Red Black Tree) | contains | O(log(n)) | TreeSet#contains |
 | Binary Search (Red Black Tree) | remove | O(log(n)) | TreeSet#remove |
 | Binary Search (Red Black Tree) | iterator | O(n) | Treeset#iterator |
-| Union Find Data Structure | union | O(\alpha (n)), \alpha(n) < 5 for almost any n
-| Union Find Data Structure | find | O(\alpha (n)), \alpha(n) < 5 for almost any n
+| Union Find Data Structure | union | O(\alpha (n)), \alpha(n) < 5 for almost any n | org.jgrapht.alg.util.UnionFind.union(T e1, T e2)
+| Union Find Data Structure | find | O(\alpha (n)), \alpha(n) < 5 for almost any n | org.jgrapht.alg.util.UnionFind.find(T e)
 
 # Special knowledge
 1. `utf-8` uses 1 to 4 8-bit chars to encode Unicode code points
