@@ -35,16 +35,16 @@
 ## Behavioral
 
 ## Design Patterns
-[Top 10 OOP Principles Summary](https://1.bp.blogspot.com/-Od9z4FHN9mA/VbjRcuQAcXI/AAAAAAAADfI/gc6uJdAP7bs/s1600/10%2BOOP%2BDesign%2BPRinciples%2Bfor%2BJava%2Bprogrammers.png)
-[Aggregation](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/)
-[Observer](https://dzone.com/articles/observer-pattern-java)
-[Proxy](https://dzone.com/articles/design-patterns-proxy)
-[IoC vs Dependency Injection](https://stackoverflow.com/questions/6550700/inversion-of-control-vs-dependency-injection)
-[Composition](https://javarevisited.blogspot.com/2015/06/difference-between-inheritance-and-Composition-in-Java-OOP.html)
-[Bridge](https://www.journaldev.com/1491/bridge-design-pattern-java)
-[Adaptor](https://www.journaldev.com/1487/adapter-design-pattern-java)
-[Factory](https://www.journaldev.com/1392/factory-design-pattern-in-java)
-[Singleton](https://www.geeksforgeeks.org/singleton-design-pattern/)
+1. [Top 10 OOP Principles Summary](https://1.bp.blogspot.com/-Od9z4FHN9mA/VbjRcuQAcXI/AAAAAAAADfI/gc6uJdAP7bs/s1600/10%2BOOP%2BDesign%2BPRinciples%2Bfor%2BJava%2Bprogrammers.png)
+2. [Aggregation](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/)
+3. [Observer](https://dzone.com/articles/observer-pattern-java)
+4. [Proxy](https://dzone.com/articles/design-patterns-proxy)
+5. [IoC vs Dependency Injection](https://stackoverflow.com/questions/6550700/inversion-of-control-vs-dependency-injection)
+6. [Composition](https://javarevisited.blogspot.com/2015/06/difference-between-inheritance-and-Composition-in-Java-OOP.html)
+7. [Bridge](https://www.journaldev.com/1491/bridge-design-pattern-java)
+8. [Adaptor](https://www.journaldev.com/1487/adapter-design-pattern-java)
+9. [Factory](https://www.journaldev.com/1392/factory-design-pattern-in-java)
+10. [Singleton](https://www.geeksforgeeks.org/singleton-design-pattern/)
 
 ## Frameworks
 1. Problem description and how they solve it
